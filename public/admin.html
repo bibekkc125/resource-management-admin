@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <title>Resource Management App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="./output.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+    />
+  </head>
+
+  <body class="bg-bgColor font-inter">
+    <!-- navbar -->
+    <nav
+      class="w-[350px] pt-10 pb-3 fixed h-screen border-1 border-gray-300 flex flex-col justify-between bg-white"
+    >
+      <div>
+        <img class="h-12 mx-auto" src="/assets/images/logo.png" alt="Logo" />
+        <h6
+          class="uppercase px-4 text-sm font-bold mt-8 .tracking-{0.105rem} text-subtleText2"
+        >
+          modules
+        </h6>
+        <!-- nav-link  -->
+        <ul class="mt-3 text-bodyCopy">
+          <li>
+            <a href="" class="nav-item nav-item-active px-6 py-3"
+              >UI UX Design</a
+            >
+          </li>
+          <li>
+            <a href="" class="nav-item px-6 py-3">Dev Ops - Essentials</a>
+          </li>
+          <li>
+            <a href="" class="nav-item px-6 py-3">Frontend Mastery</a>
+          </li>
+          <li>
+            <a href="" class="nav-item px-6 py-3">Backend Development</a>
+          </li>
+          <li>
+            <a href="" class="nav-item px-6 py-3">MERN Stack</a>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="px-4 py-3 flex justify-between text-bodyCopy hover:bg-primaryLight transition-all cursor-pointer"
+      >
+        <div class="flex">
+          <img class="h-12" src="/assets/images/avatar.png" alt="Avatar" />
+          <div class="pl-3">
+            <b class="block text-base">Jenny Wilson</b>
+            <small class="text-sm text-subtleText">Admin</small>
+          </div>
+        </div>
+        <i class="icon-chevron text-xl"></i>
+      </div>
+    </nav>
+
+    <main class="ml-[350px] pl-[24px] pr-6 pt-6 h-screen flex flex-col flex-1">
+      <!-- breadcrumb  -->
+      <div class="text-subtleText">
+        <a href="#" class="hover:underline text-primary transition-all"
+          >UI UX Design</a
+        >
+        > Add Lecture
+      </div>
+
+      <section class="mt-3 flex justify-between">
+        <div>
+          <h1 class="text-4xl font-bold text-heading">Add Lecture</h1>
+          <span class="block mt-1 font-medium text-base text-bodyCopy"
+            >UI UX Design</span
+          >
+        </div>
+        <div>
+          <button
+            class="px-4 py-[10.5px] border-[1.5px] border-primary text-primary rounded-lg font-medium"
+          >
+            Discard</button
+          ><button
+            class="ml-3 px-4 py-[10.5px] bg-primary rounded-lg font-bold text-white border-1 border-primary"
+          >
+            Save Changes
+          </button>
+        </div>
+      </section>
+
+      <section
+        class="px-4 py-5 border-1 border-gray-300 bg-white mt-6 rounded-lg overflow-y-auto"
+      >
+        <ul class="flex text-bodyCopy">
+          <li class="mr-3">
+            <input type="radio" id="week1" class="hidden" />
+            <label
+              for="week1"
+              class="px-4 py-[9.5px] text-white rounded-full bg-primary border-primary block"
+              >Week 1</label
+            >
+          </li>
+          <li class="mr-3">
+            <input type="radio" id="week2" class="hidden" />
+            <label
+              for="week2"
+              class="block px-4 py-[9.5px] border-1 border-hairlines rounded-full hover:bg-primaryLight hover:border-primary cursor-pointer transition-all"
+              >Week 2</label
+            >
+          </li>
+          <li class="mr-3">
+            <input type="radio" id="week3" class="hidden" />
+            <label
+              for="week3"
+              class="block px-4 py-[9.5px] border-1 border-hairlines rounded-full hover:bg-primaryLight hover:border-primary cursor-pointer transition-all"
+              >Week 3</label
+            >
+          </li>
+          <li class="mr-3">
+            <input type="radio" id="week4" class="hidden" />
+            <label
+              for="week4"
+              class="block px-4 py-[9.5px] border-1 border-hairlines rounded-full hover:bg-primaryLight hover:border-primary cursor-pointer transition-all"
+              >Week 4</label
+            >
+          </li>
+          <li class="mr-3">
+            <input type="radio" id="week5" class="hidden" />
+            <label
+              for="week5"
+              class="block px-4 py-[9.5px] border-1 border-hairlines rounded-full hover:bg-primaryLight hover:border-primary cursor-pointer transition-all"
+              >Week 5</label
+            >
+          </li>
+          <li class="mr-3">
+            <input type="radio" id="week5" class="hidden" />
+            <label
+              for="week5"
+              class="flex items-center px-10 w-[88px] h-full border-1 border-dashed rounded-full hover:bg-primaryLight border-primary cursor-pointer transition-all"
+              >+</label
+            >
+          </li>
+        </ul>
+
+        <form class="mt-6 flex flex-col max-w-[650px] text-bodyCopy">
+          <label for="title">Title</label>
+          <input
+            id="title"
+            type="text"
+            class="px-4 mt-2 py-[10.5px] border-1 rounded-lg block border-formFields"
+            placeholder="Enter Lecture Title..."
+          />
+
+          <label for="desc" class="mt-6">Description</label>
+          <textarea
+            id="desc"
+            type="text"
+            class="px-4 mt-2 py-[10.5px] border-1 rounded-lg block border-formFields"
+            placeholder="Enter Lecture Description..."
+            rows="6"
+          ></textarea>
+          <div class="mt-6">
+            <div>
+              <label for="attach" class="block text-bodyCopy font-medium"
+                >Attachments</label
+              >
+              <a
+                href="#"
+                id="attach"
+                class="h-48 px-4 mt-2 py-[10.5px] border-1 border-dashed rounded-lg flex items-center justify-center border-formFields hover:bg-primaryLight hover:border-primary transition-all"
+              >
+                <div class="flex flex-col items-center text-bodyCopy">
+                  <i class="icon-upload-outline text-5xl"></i>
+                  <p class="mt-2">
+                    Drag and drop file, or
+                    <span class="font-bold text-teal-600">Browse</span>
+                  </p>
+                  <small class="mt-1 text-subtleText"
+                    >Supports PDF, zip, HTML, PNG and JPG</small
+                  >
+                </div>
+              </a>
+              <small class="mt-2 block text-subtleText"
+                >Maximum 20MB per file</small
+              >
+            </div>
+            <ul class="mt-4 uploaded-files">
+              <li class="mb-2">
+                <a
+                  href="#"
+                  class="border-1 border-hairlines p-4 flex items-center rounded-lg text-bodyCopy transition-all group hover:bg-primaryLight hover:border-primary"
+                >
+                  <i class="icon-pdf-outline text-4xl"></i>
+                  <div class="flex-1 ml-3">
+                    <p class="font-medium">Intro to UX</p>
+                    <small>5.3MB</small>
+                  </div>
+                  <span
+                    class="w-8 h-8 border-1 border-danger rounded-full inline-flex justify-center items-center text-danger cursor-pointer opacity-0 group-hover:opacity-100 transition-all hover:bg-dangerLight"
+                  >
+                    <i class="icon-close text-base font-bold"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="mb-2">
+                <a
+                  href="#"
+                  class="border-1 border-hairlines p-4 flex items-center rounded-lg text-bodyCopy transition-all hover:bg-primaryLight hover:border-primary"
+                >
+                  <i class="icon-image-outline text-4xl"></i>
+                  <div class="flex-1 mx-3">
+                    <p class="font-medium">Course Curriculum.png</p>
+                    <div class="progress-bar h-2 bg-gray-200 rounded-full mt-2">
+                      <div class="h-full w-2/3 bg-primary rounded-full"></div>
+                    </div>
+                  </div>
+                  <span
+                    class="w-8 h-8 border-1 border-danger rounded-full inline-flex justify-center items-center text-danger cursor-pointer transition-all hover:bg-dangerLight"
+                  >
+                    <i class="icon-close text-base font-bold"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="mb-2">
+                <a
+                  href="#"
+                  class="border-1 border-hairlines p-4 flex items-center rounded-lg text-bodyCopy transition-all hover:bg-primaryLight hover:border-primary"
+                >
+                  <i class="icon-zip-outline text-4xl"></i>
+                  <div class="flex-1 mx-3">
+                    <p class="font-medium">Lecture Materials.zip</p>
+                    <small>Couldn't upload file</small>
+                  </div>
+                  <div class="actions flex">
+                    <span
+                      class="w-8 h-8 border-1 border-primary rounded-full inline-flex justify-center items-center text-primary cursor-pointer"
+                    >
+                      <i class="icon-reload-outline text-base font-bold"></i>
+                    </span>
+                    <span
+                      class="ml-3 w-8 h-8 border-1 border-danger rounded-full inline-flex justify-center items-center text-danger cursor-pointer transition-all hover:bg-dangerLight"
+                    >
+                      <i class="icon-close text-base font-bold"></i>
+                    </span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </form>
+      </section>
+    </main>
+    <script></script>
+  </body>
+</html>
